@@ -23,4 +23,24 @@
     </tr>
   </tbody>
 </table>
+
+<h2>My Portfolio</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Qty</th>
+        <th scope="col">USD Value</th>
+        <th scope="col">%</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @currency.portfolio_qty %></td>
+          <td><%= @currency.portfolio_value %></td>
+            <td><%=  %></td>
+          </tr>
+    </tbody>
+  </table>
+<hr>
+<a class="btn btn-warning" href="<%= currencies_path %>">Home</a>
 </div>

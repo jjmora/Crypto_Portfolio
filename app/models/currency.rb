@@ -54,4 +54,10 @@ class Currency < ApplicationRecord
       end
     end
   end
+
+  def check_value(amount)
+    result = (price.to_f * amount.to_f).round(4)
+    return result.round(2)
+  end
+  
 end

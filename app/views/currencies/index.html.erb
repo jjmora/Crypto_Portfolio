@@ -2,7 +2,7 @@
   <h1>Crypto Porftolio</h1>
   <h2>Total value: XXX USD</h2>
 </div>
-<%= button_to 'Price Update', update_path, method: :post, class: "btn btn-success" %>
+<%= button_to 'Price Update', update_path, method: :post, class: "btn btn-success ml-5" %>
 <hr>
 <div class="m-5">
   <table class="table">
@@ -15,6 +15,10 @@
         <th scope="col">Slug</th>
         <th scope="col" class="text-right pr-4">Price</th>
         <th scope="col">CMC #id</th>
+        <th scope="col">My portfolio</th>
+        <th scope="col"></th>
+        <th scope="col">Qty</th>
+        <th scope="col">TOTAL USD</th>
       </tr>
     </thead>
 
@@ -28,6 +32,17 @@
           <td><%= crypto.slug %></td>
           <td class="text-right"><%= crypto.price.round(4) %></td>
           <td><%= crypto.id_CMC %></td>
+          <%= form_tag calculate_path do %>
+            <td>
+              <%= number_field_tag 'amount', nil, min: 0, step: 0.01 %>
+              <%= hidden_field_tag :id, crypto.id_CMC %>
+            </td>
+            <td>
+              <%= submit_tag "+", :class=>"btn btn-primary" %>
+            </td>
+          <% end %>
+          <td><%= crypto.portfolio_qty %></td>
+          <td><%= crypto.portfolio_value %></td>
         </tr>
       <% end%>
     </tbody>
