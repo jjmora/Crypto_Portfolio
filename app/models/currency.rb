@@ -69,4 +69,8 @@ class Currency < ApplicationRecord
     return total.round(2)
   end
 
+  def calculate_porcentage(total, amount)
+    porcentage = amount/total*100
+  end
+
 end

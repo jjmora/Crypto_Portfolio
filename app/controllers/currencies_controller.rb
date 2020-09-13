@@ -8,6 +8,7 @@ class CurrenciesController < ApplicationController
     @id = params[:id]
     @currency = Currency.find(@id)
     @total = Currency.portfolio_total_value
+    @porcentage = @currency.calculate_porcentage(@total, @currency.portfolio_value).round(2)
   end
 
   def update

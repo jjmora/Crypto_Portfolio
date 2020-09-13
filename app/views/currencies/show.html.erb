@@ -1,6 +1,6 @@
 <div class="m-5">
 <h1><%= @currency.name %></h1>
-<h2>Total value: <%= @total %> USD</h2>
+<h2>Total Portfolio value: <%= @total %> EUR</h2>
 <img class="img-thumbnail" src="<%= @currency.logo %>">
 <table class="table my-5">
   <thead>
@@ -10,7 +10,7 @@
       <th scope="col">Symbol</th>
       <th scope="col">Max Supply</th>
       <th scope="col">Slug</th>
-      <th scope="col">Price</th>
+      <th scope="col">Price (€)</th>
     </tr>
   </thead>
   <tbody>
@@ -30,7 +30,7 @@
     <thead>
       <tr>
         <th scope="col">Qty</th>
-        <th scope="col">USD Value</th>
+        <th scope="col">EUR Value</th>
         <th scope="col">%</th>
       </tr>
     </thead>
@@ -38,7 +38,7 @@
       <tr>
         <td><%= @currency.portfolio_qty %></td>
           <td><%= @currency.portfolio_value %></td>
-            <td><%=  %></td>
+            <td><%= @porcentage %></td>
           </tr>
     </tbody>
   </table>

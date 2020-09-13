@@ -1,6 +1,6 @@
 <div class="m-5">
   <h1>Crypto Porftolio</h1>
-  <h2>Total Portolio value: <%= @total %> USD</h2>
+  <h2>Total Portolio value: <%= @total %> EUR</h2>
 </div>
 <%= button_to 'Price Update', update_path, method: :post, class: "btn btn-success ml-5" %>
 <hr>
@@ -13,12 +13,12 @@
         <th scope="col">Crypto</th>
         <th scope="col" class="text-center">Symbol</th>
         <th scope="col">Slug</th>
-        <th scope="col" class="text-right pr-4">Price</th>
+        <th scope="col" class="text-right pr-4">Price (€)</th>
         <th scope="col">CMC #id</th>
         <th scope="col">My portfolio</th>
         <th scope="col"></th>
         <th scope="col">Qty</th>
-        <th scope="col">TOTAL USD</th>
+        <th scope="col">TOTAL EUR</th>
       </tr>
     </thead>
 
