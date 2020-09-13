@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'currencies#index'
+  post '/update', to: 'currencies#update'
+
+  resources :currencies, only: [:index, :show]
 end

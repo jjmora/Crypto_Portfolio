@@ -1,0 +1,26 @@
+<div class="m-5">
+<h1><%= @currency.name %></h1>
+<img class="img-thumbnail" src="<%= @currency.logo %>">
+<table class="table my-5">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Symbol</th>
+      <th scope="col">Max Supply</th>
+      <th scope="col">Slug</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @id %></td>
+      <td><%= @currency.name %></td>
+      <td><%= @currency.currency_symbol %></td>
+      <td><%= @currency.max_supply %></td>
+      <td><%= @currency.slug %></td>
+      <td><%= @currency.price.round(4) %></td>
+    </tr>
+  </tbody>
+</table>
+</div>

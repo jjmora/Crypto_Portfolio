@@ -1,0 +1,35 @@
+<div class="m-5">
+  <h1>Crypto Porftolio</h1>
+  <h2>Total value: XXX USD</h2>
+</div>
+<%= button_to 'Price Update', update_path, method: :post, class: "btn btn-success" %>
+<hr>
+<div class="m-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col">Rank</th>
+        <th scope="col">Crypto</th>
+        <th scope="col" class="text-center">Symbol</th>
+        <th scope="col">Slug</th>
+        <th scope="col" class="text-right pr-4">Price</th>
+        <th scope="col">CMC #id</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @currencies.order('rank ASC').each do |crypto| %>
+        <tr>
+          <td><img style="width:35px;" src=<%= crypto.logo %>></td>
+          <td><%= crypto.rank %></td>
+          <td><a href="<%= currency_path(crypto.id) %>"><%= crypto.name %></a></td>
+          <td class="text-center"><%= crypto.currency_symbol %></td>      
+          <td><%= crypto.slug %></td>
+          <td class="text-right"><%= crypto.price.round(4) %></td>
+          <td><%= crypto.id_CMC %></td>
+        </tr>
+      <% end%>
+    </tbody>
+  </table>
+</div>
