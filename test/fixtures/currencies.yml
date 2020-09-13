@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rank: 1
+  name: MyString
+  currency_symbol: MyString
+  max_supply: 
+  slug: MyString
+  logo: MyString
+  id_CMC: 1
+  market_cap: 
+  price: 1.5
+  portfolio_value: 1.5
+  portfolio_qty: 1.5
+
+two:
+  rank: 1
+  name: MyString
+  currency_symbol: MyString
+  max_supply: 
+  slug: MyString
+  logo: MyString
+  id_CMC: 1
+  market_cap: 
+  price: 1.5
+  portfolio_value: 1.5
+  portfolio_qty: 1.5
