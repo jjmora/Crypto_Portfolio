@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+App réalisé pour le tutorial : "Crypto Portfolio avec Ruby on Rails"
 
-Things you may want to cover:
+Tutorial publié sur medium.com en Septembre/2020
 
-* Ruby version
+Branches:
 
-* System dependencies
+* Tutorial_v1 : Branche avec l'application qui correspond au tutorial "Crypto Portfolio avec Ruby on Rails"
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Réalisé par www.juanjosemora.es comme mission moussaillon de la formation The Hacking Project (été 2020)
