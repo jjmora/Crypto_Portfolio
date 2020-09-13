@@ -1,11 +1,13 @@
 class CurrenciesController < ApplicationController
   def index
     @currencies = Currency.all.order('rank ASC')
+    @total = Currency.portfolio_total_value
   end
 
   def show
     @id = params[:id]
     @currency = Currency.find(@id)
+    @total = Currency.portfolio_total_value
   end
 
   def update
@@ -23,4 +25,6 @@ class CurrenciesController < ApplicationController
     currency.update(:portfolio_value => @value, :portfolio_qty => amount)
     redirect_to currencies_path
   end
+
+
 end

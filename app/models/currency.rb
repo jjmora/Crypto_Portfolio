@@ -59,5 +59,14 @@ class Currency < ApplicationRecord
     result = (price.to_f * amount.to_f).round(4)
     return result.round(2)
   end
-  
+
+  def self.portfolio_total_value
+    currencies = Currency.all
+    total = 0
+    currencies.each do |x|
+      total = total + x.portfolio_value
+    end
+    return total.round(2)
+  end
+
 end
